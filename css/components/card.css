@@ -1,0 +1,58 @@
+.card {
+  background-color: #fff;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, .1);
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.card-top {
+  height: 150px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.card-top img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.card-top-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-top-info i {
+  color: rgb(255, 223, 16);
+}
+
+.card-top-info h3,
+.card-top-info p {
+  margin: 0;
+}
+
+.card-middle {
+  margin-bottom: 12px;
+}
+
+.card-middle img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.card-bottom {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.card-bottom img {
+  height: 70px;  /* Essa altura estava sendo o problema! A proporção de width: 100px não estava alinhando corretamente com o width total do cartão. Colocando width: 70px faz as imagens encaixarem da forma correta com o flex-grow abaixo. */
+  flex-grow: 1;
+  object-fit: cover;
+}
